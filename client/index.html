@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KOVAVA SOCKS — Dress From The Ankle Up</title>
+<meta name="description" content="KOVAVA SOCKS. Bold socks. Dress from the ankle up.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:ital,wght@0,400;0,700;0,900;1,900&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+:root{--O:#FF5A00;--O2:#FF7A00;--Y:#FFB800;--B:#0047FF;--B2:#0066FF;--K:#060606;--W:#F8F3EC;--D:'Bebas Neue',sans-serif;--C:'Barlow Condensed',sans-serif;}
+body{font-family:var(--C);background:var(--K);color:var(--W);overflow-x:hidden;cursor:none}
+#CR,#CD{position:fixed;pointer-events:none;z-index:9999;border-radius:50%;transform:translate(-50%,-50%)}
+#CR{width:32px;height:32px;border:1.5px solid var(--O);mix-blend-mode:difference;transition:width .2s,height .2s,background .2s}
+#CD{width:5px;height:5px;background:var(--W)}
+body:has(a:hover) #CR,body:has(button:hover) #CR{width:52px;height:52px;background:rgba(255,90,0,.1)}
+
+nav{position:fixed;top:0;left:0;right:0;z-index:800;height:66px;display:flex;align-items:center;justify-content:space-between;padding:0 40px;background:transparent;border-bottom:1.5px solid transparent;transition:background .4s,border-color .4s,backdrop-filter .4s}
+nav.solid{background:rgba(240,240,240,.92);backdrop-filter:blur(20px);border-bottom-color:rgba(200,200,200,.3)}
+.n-logo-img{height:50px;width:auto;display:block;opacity:.95;transition:all .3s;filter:drop-shadow(0 2px 8px rgba(0,0,0,.3)) brightness(1.2)}
+nav.solid .n-logo-img{opacity:1;filter:drop-shadow(0 1px 4px rgba(0,0,0,.5)) brightness(1.4)}
+.n-mid{display:flex;gap:26px}
+.n-mid a{font-family:var(--C);font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,.7);text-decoration:none;text-shadow:0 1px 6px rgba(0,0,0,.7);transition:color .2s}
+.n-mid a:hover{color:var(--W)}
+nav.solid .n-mid a{color:rgba(0,0,0,.6);text-shadow:none}
+nav.solid .n-mid a:hover{color:rgba(0,0,0,.9)}
+.n-right{display:flex;gap:8px}
+.nc{font-family:var(--C);font-size:11px;font-weight:900;letter-spacing:2px;text-transform:uppercase;text-decoration:none;padding:7px 16px;border:none;cursor:none;transition:all .18s}
+.nc-wa{background:var(--O);color:var(--K)}.nc-wa:hover{background:var(--Y)}
+.nc-tt{background:rgba(255,255,255,.15);color:var(--W);border:1.5px solid rgba(255,255,255,.4);backdrop-filter:blur(8px)}.nc-tt:hover{background:rgba(255,255,255,.28)}
+
+/* HERO */
+.hero{position:relative;width:100%;height:100vh;min-height:680px;overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end}
+.hero-photo{position:absolute;inset:0;z-index:0;background-size:cover;background-position:center top;background-repeat:no-repeat}
+.hero-scrim{position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(to bottom,rgba(0,0,0,.2) 0%,rgba(0,0,0,0) 14%),linear-gradient(to top,rgba(6,6,6,.96) 0%,rgba(6,6,6,.7) 16%,rgba(6,6,6,.1) 38%,transparent 56%)}
+.hero-floor{position:relative;z-index:10;padding:0 48px 52px;display:flex;align-items:flex-end;justify-content:space-between;gap:40px}
+.hero-slogan{opacity:0;animation:fu .8s .15s ease both}
+.hero-slogan strong{display:block;font-family:var(--C);font-size:clamp(16px,2vw,24px);font-weight:900;font-style:italic;letter-spacing:3px;text-transform:uppercase;color:var(--W);text-shadow:1px 2px 10px rgba(0,0,0,.8)}
+.hero-slogan span{display:block;font-family:var(--C);font-size:12px;font-weight:700;letter-spacing:5px;text-transform:uppercase;color:rgba(255,255,255,.4);margin-top:4px}
+.hero-ctas{display:flex;flex-direction:column;gap:9px;min-width:234px;flex-shrink:0;opacity:0;animation:fu .85s .3s ease both}
+.btn{font-family:var(--C);font-size:12px;font-weight:900;letter-spacing:2.5px;text-transform:uppercase;text-decoration:none;border:none;cursor:none;padding:13px 24px;display:flex;align-items:center;justify-content:space-between;gap:8px;position:relative;overflow:hidden;transition:transform .2s}
+.btn::before{content:'';position:absolute;inset:0;transform:translateX(-101%);transition:transform .26s cubic-bezier(.16,1,.3,1)}
+.btn:hover{transform:translate(-2px,-3px)}.btn:hover::before{transform:translateX(0)}
+.btn span{position:relative;z-index:1}
+.b-w{background:var(--W);color:var(--K);box-shadow:4px 4px 0 rgba(255,90,0,.35)}.b-w::before{background:var(--Y)}
+.b-o{background:var(--O);color:var(--K);box-shadow:4px 4px 0 rgba(0,0,0,.3)}.b-o::before{background:var(--O2)}
+.b-g{background:rgba(255,255,255,.12);color:var(--W);border:1.5px solid rgba(255,255,255,.35);backdrop-filter:blur(10px)}.b-g::before{background:rgba(255,255,255,.1)}.b-g:hover{border-color:var(--W)}
+.h-scroll{position:absolute;bottom:16px;left:50%;transform:translateX(-50%);z-index:10;display:flex;flex-direction:column;align-items:center;gap:5px;font-family:var(--C);font-size:9px;letter-spacing:4px;text-transform:uppercase;color:rgba(255,255,255,.22);opacity:0;animation:fu .6s 1s ease both,bob 2.2s 2s ease-in-out infinite}
+.h-sb{width:1px;height:32px;background:rgba(255,90,0,.18);overflow:hidden;position:relative}
+.h-sb::after{content:'';position:absolute;inset:0;background:var(--O);transform:translateY(-100%);animation:sf 2.2s 1.5s ease-in-out infinite}
+@keyframes sf{0%{transform:translateY(-100%)}50%{transform:translateY(0)}100%{transform:translateY(100%)}}
+@keyframes bob{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(6px)}}
+@keyframes fu{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+
+/* MARQUEE */
+.mq{overflow:hidden;display:flex;align-items:center}
+.mq-or{height:50px;background:var(--O);border-top:3px solid var(--K);border-bottom:3px solid var(--K)}
+.mq-dk{height:44px;background:#0a0a0a;border-bottom:1px solid rgba(255,90,0,.1)}
+.mq-tr{display:flex;width:max-content}
+.mqf{animation:mqF 16s linear infinite}
+.mqr{animation:mqR 11s linear infinite}
+@keyframes mqF{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@keyframes mqR{from{transform:translateX(-50%)}to{transform:translateX(0)}}
+.mi{font-family:var(--D);font-size:24px;letter-spacing:5px;color:var(--K);padding:0 32px;white-space:nowrap}
+.mi .dot{color:var(--B)}
+.mr{font-family:var(--C);font-size:11px;font-weight:700;letter-spacing:6px;text-transform:uppercase;color:rgba(248,243,236,.14);padding:0 26px;white-space:nowrap}
+.mr.h{color:var(--O)}
+
+/* UTILS */
+.slbl{font-family:var(--C);font-size:10px;font-weight:700;letter-spacing:7px;text-transform:uppercase;color:var(--O);display:flex;align-items:center;gap:12px;margin-bottom:12px}
+.slbl::after{content:'';flex:1;height:1px;background:linear-gradient(to right,rgba(255,90,0,.3),transparent)}
+.sh{font-family:var(--D);font-size:clamp(48px,7vw,96px);line-height:.88}
+.rv{opacity:0;transform:translateY(34px);transition:opacity .9s cubic-bezier(.16,1,.3,1),transform .9s cubic-bezier(.16,1,.3,1)}
+.rv.on{opacity:1;transform:translateY(0)}
+.d1{transition-delay:.07s}.d2{transition-delay:.17s}.d3{transition-delay:.27s}
+
+/* COLLECTIONS - SIMPLIFIED LAYOUT */
+.coll{background:var(--K);padding-bottom:3px}
+.coll-hd{padding:80px 44px 48px;display:flex;justify-content:space-between;align-items:flex-end}
+.coll-meta{font-family:var(--C);font-size:12px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:rgba(248,243,236,.2);max-width:172px;text-align:right;line-height:2.2}
+.cg{display:grid;gap:3px;margin-bottom:3px}
+.cg-2col{grid-template-columns:1fr 1fr;height:480px}
+.cg-3col{grid-template-columns:1fr 1fr 1fr;height:360px}
+.cc{position:relative;overflow:hidden;cursor:none}
+.cc-bg{position:absolute;inset:0;transition:transform .6s cubic-bezier(.16,1,.3,1)}
+.cc-bg img{width:100%;height:100%;object-fit:cover;object-position:center 18%;display:block}
+.cc:hover .cc-bg{transform:scale(1.05)}
+.cc-tone{position:absolute;inset:0;z-index:1;pointer-events:none}
+.cc-tone-orange{background:linear-gradient(135deg,rgba(255,90,0,.35) 0%,rgba(255,90,0,.1) 100%)}
+.cc-tone-blue{background:linear-gradient(135deg,rgba(0,71,255,.35) 0%,rgba(0,71,255,.1) 100%)}
+.cc::after{content:'';position:absolute;inset:0;z-index:2;pointer-events:none;background:repeating-linear-gradient(180deg,transparent 0,transparent 3px,rgba(255,90,0,.022) 3px,rgba(255,90,0,.022) 4px);opacity:0;transition:opacity .25s}
+.cc:hover::after{opacity:1}
+.cc-price{position:absolute;bottom:22px;right:20px;z-index:6;font-family:var(--C);font-size:15px;font-weight:700;letter-spacing:2px;color:var(--W);background:rgba(0,0,0,.55);padding:4px 12px;backdrop-filter:blur(8px)}
+.cc-info{position:absolute;bottom:0;left:0;right:0;z-index:5;padding:32px 22px 20px;background:linear-gradient(transparent,rgba(6,6,6,.88));}
+.cc-s{font-family:var(--C);font-size:9px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:rgba(255,255,255,.45);margin-bottom:4px}
+.cc-n{font-family:var(--D);font-size:clamp(22px,2.8vw,38px);line-height:.92;color:var(--W);letter-spacing:1px}
+.cc-c{font-family:var(--C);font-size:12px;font-style:italic;color:rgba(248,243,236,.38);margin-top:4px}
+.bdg{position:absolute;top:16px;left:16px;z-index:5;font-family:var(--C);font-size:9px;font-weight:700;letter-spacing:3px;text-transform:uppercase;padding:3px 10px;background:rgba(255,255,255,.12);color:rgba(255,255,255,.7);border:1px solid rgba(255,255,255,.2);backdrop-filter:blur(6px)}
+
+/* PRODUCT */
+.prod{background:#050508;padding-top:3px}
+.prod-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:3px}
+.pd{position:relative;overflow:hidden;cursor:none;aspect-ratio:1/1.15}
+.pd-bg{position:absolute;inset:0;transition:transform .6s cubic-bezier(.16,1,.3,1)}
+.pd-bg img{width:100%;height:100%;object-fit:cover;display:block;transition:filter .4s}
+.pd:hover .pd-bg{transform:scale(1.07) rotate(.5deg)}
+.pd:hover .pd-bg img{filter:saturate(1.3) contrast(1.08)}
+.pd-scrim{position:absolute;inset:0;z-index:1;background:linear-gradient(transparent 25%,rgba(6,6,6,.9) 100%);pointer-events:none}
+.pd-bar{position:absolute;top:0;left:0;right:0;height:3px;z-index:4}
+.pd:nth-child(1) .pd-bar{background:var(--O)}.pd:nth-child(2) .pd-bar{background:var(--B)}.pd:nth-child(3) .pd-bar{background:var(--Y)}
+.pd-info{position:absolute;bottom:0;left:0;right:0;padding:26px 22px;z-index:3}
+.pd-lbl{font-family:var(--C);font-size:10px;font-weight:700;letter-spacing:5px;text-transform:uppercase;color:var(--O);margin-bottom:5px}
+.pd-copy{font-family:var(--D);font-size:clamp(20px,2.8vw,36px);line-height:.93;color:var(--W)}
+.pd-desc{font-family:var(--C);font-size:12px;font-style:italic;color:rgba(248,243,236,.3);margin-top:5px;letter-spacing:1px}
+
+/* LOOKBOOK */
+.lb{background:#060606;padding:84px 0}
+.lb-hd{padding:0 44px 44px;display:flex;justify-content:space-between;align-items:flex-end}
+.lb-sub{font-family:var(--C);font-size:11px;letter-spacing:4px;text-transform:uppercase;color:rgba(248,243,236,.17);max-width:148px;text-align:right;line-height:2}
+.lb-tr{display:flex;overflow-x:auto;gap:3px;padding:0 44px;scroll-snap-type:x mandatory;scroll-behavior:smooth}
+.lbc{flex-shrink:0;position:relative;overflow:hidden;scroll-snap-align:start}
+.lbc img{width:100%;height:100%;object-fit:cover;display:block}
+.lbc-price{position:absolute;top:12px;right:12px;z-index:5;font-family:var(--C);font-size:13px;font-weight:700;color:var(--W);background:rgba(0,0,0,.6);padding:4px 10px;backdrop-filter:blur(8px)}
+.lbc-info{position:absolute;bottom:0;left:0;right:0;z-index:5;padding:20px 16px;background:linear-gradient(transparent,rgba(6,6,6,.9))}
+.lbc-tag{font-family:var(--C);font-size:8px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:3px}
+.lbc-nm{font-family:var(--D);font-size:clamp(16px,2.2vw,28px);line-height:.95;color:var(--W)}
+
+/* SOCIAL PROOF - SIMPLIFIED */
+.soc{background:#0a0a0a;padding:84px 44px}
+.tt-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;margin-top:44px}
+.tt-card{position:relative;overflow:hidden;aspect-ratio:1/1.3;cursor:none}
+.tt-bg{position:absolute;inset:0;transition:transform .5s cubic-bezier(.16,1,.3,1)}
+.tt-bg img{width:100%;height:100%;object-fit:cover;display:block}
+.tt-card:hover .tt-bg{transform:scale(1.06)}
+.tt-tone{position:absolute;inset:0;z-index:1;background:linear-gradient(135deg,rgba(0,0,0,.3) 0%,rgba(0,0,0,.1) 100%)}
+.tt-top{position:absolute;top:12px;right:12px;z-index:3;display:flex;gap:8px;align-items:center}
+.tt-live{font-family:var(--C);font-size:9px;font-weight:900;letter-spacing:2px;text-transform:uppercase;color:var(--W);background:rgba(255,90,0,.8);padding:2px 8px}
+.tt-vw{font-family:var(--C);font-size:10px;font-weight:700;color:rgba(255,255,255,.8)}
+.tt-bot{position:absolute;bottom:0;left:0;right:0;z-index:3;padding:16px 12px;background:linear-gradient(transparent,rgba(6,6,6,.95))}
+.tt-usr{font-family:var(--C);font-size:10px;font-weight:700;letter-spacing:1px;color:var(--O);margin-bottom:4px}
+.tt-txt{font-family:var(--C);font-size:11px;font-style:italic;color:rgba(255,255,255,.8);margin-bottom:8px;line-height:1.4}
+.tt-meta{display:flex;gap:12px;font-family:var(--C);font-size:9px;color:rgba(255,255,255,.5)}
+.tt-m{display:flex;align-items:center;gap:3px}
+
+/* FINAL CTA - SIMPLIFIED & CLEAN */
+.final{position:relative;width:100%;min-height:100vh;overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end;background:var(--K)}
+.fb-photo{position:absolute;inset:0;z-index:0;background-size:cover;background-position:center top;background-repeat:no-repeat}
+.fb-scrim{position:absolute;inset:0;z-index:1;background:linear-gradient(to bottom,rgba(0,0,0,.1) 0%,rgba(0,0,0,.3) 30%),linear-gradient(to top,rgba(6,6,6,.98) 0%,rgba(6,6,6,.85) 20%,rgba(6,6,6,.3) 50%,transparent 70%);pointer-events:none}
+.fb-ghost{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);z-index:0;font-family:var(--D);font-size:clamp(80px,15vw,200px);font-weight:900;letter-spacing:8px;text-transform:uppercase;color:rgba(255,90,0,.04);text-align:center;white-space:nowrap;pointer-events:none;line-height:.9}
+.fb-slash{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%) rotate(-15deg);z-index:0;width:80%;height:2px;background:linear-gradient(90deg,transparent,rgba(255,90,0,.15),transparent);pointer-events:none}
+.fb-con{position:relative;z-index:10;padding:0 48px 52px;text-align:center;max-width:800px;margin:0 auto}
+.fb-eye{font-family:var(--C);font-size:11px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:24px}
+.fb-t{font-family:var(--D);font-size:clamp(48px,8vw,96px);line-height:.95;letter-spacing:2px;color:var(--W);margin-bottom:20px}
+.ft1{display:block;color:rgba(255,255,255,.8)}
+.ft2{display:block;color:var(--O)}
+.fb-sub{font-family:var(--C);font-size:14px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:40px}
+.fb-sos{display:flex;justify-content:center;gap:20px;margin-bottom:40px}
+.si{display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,.08);color:var(--W);text-decoration:none;transition:all .3s;border:1.5px solid rgba(255,255,255,.15)}
+.si:hover{background:rgba(255,90,0,.2);border-color:var(--O);color:var(--O)}
+.fb-ctas{display:flex;flex-direction:column;gap:12px;max-width:400px;margin:0 auto}
+.fb-btn{font-family:var(--C);font-size:12px;font-weight:900;letter-spacing:2.5px;text-transform:uppercase;text-decoration:none;border:none;cursor:none;padding:15px 24px;display:flex;align-items:center;justify-content:space-between;gap:12px;position:relative;overflow:hidden;transition:transform .2s}
+.fb-btn::before{content:'';position:absolute;inset:0;transform:translateX(-101%);transition:transform .26s cubic-bezier(.16,1,.3,1)}
+.fb-btn:hover{transform:translate(-2px,-3px)}.fb-btn:hover::before{transform:translateX(0)}
+.fb-btn span{position:relative;z-index:1}
+.fb-p{background:var(--O);color:var(--K);box-shadow:4px 4px 0 rgba(0,0,0,.3)}.fb-p::before{background:var(--O2)}
+.fb-o{background:var(--B);color:var(--W);box-shadow:4px 4px 0 rgba(0,71,255,.3)}.fb-o::before{background:var(--B2)}
+.fb-g{background:rgba(255,255,255,.12);color:var(--W);border:1.5px solid rgba(255,255,255,.35);backdrop-filter:blur(10px)}.fb-g::before{background:rgba(255,255,255,.1)}.fb-g:hover{border-color:var(--W)}
+
+/* FOOTER */
+footer{background:#f5f5f5;border-top:1px solid rgba(0,0,0,.08);padding:40px;display:flex;justify-content:space-between;align-items:center;gap:40px;flex-wrap:wrap}
+.ft-logo{height:40px;width:auto;display:block;opacity:.95;filter:drop-shadow(0 1px 2px rgba(0,0,0,.3))}
+.ft-lks{display:flex;gap:24px;flex-wrap:wrap}
+.ft-lks a{font-family:var(--C);font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:rgba(0,0,0,.5);text-decoration:none;transition:color .2s}
+.ft-lks a:hover{color:var(--O)}
+.ft-cp{font-family:var(--C);font-size:10px;color:rgba(0,0,0,.3);margin-left:auto}
+
+@media(max-width:768px){
+nav{padding:0 24px}
+.hero-floor{padding:0 24px 32px;flex-direction:column;align-items:flex-start;gap:20px}
+.coll-hd{padding:60px 24px 32px;flex-direction:column;align-items:flex-start;gap:20px}
+.coll-meta{text-align:left}
+.cg-2col{grid-template-columns:1fr;height:auto}
+.cg-3col{grid-template-columns:1fr 1fr;height:auto}
+.prod-grid{grid-template-columns:1fr 1fr}
+.lb-hd{padding:0 24px 32px;flex-direction:column;align-items:flex-start;gap:20px}
+.lb-sub{text-align:left}
+.lb-tr{padding:0 24px}
+.soc{padding:60px 24px}
+.fb-con{padding:0 24px 32px}
+.fb-ctas{max-width:100%}
+footer{padding:24px;flex-direction:column;align-items:flex-start}
+.ft-cp{margin-left:0}
+}
+</style>
+</head>
+<body>
+
+<div id="CR"></div><div id="CD"></div>
+
+<nav id="NAV">
+  <img class="n-logo-img" id="NL" src="" alt="KOVAVA">
+  <div class="n-mid">
+    <a href="#coll">Collections</a>
+    <a href="#lb">Lookbook</a>
+    <a href="#soc">From The Feed</a>
+  </div>
+  <div class="n-right">
+    <a class="nc nc-wa" href="https://wa.me/your-number">WhatsApp</a>
+    <a class="nc nc-tt" href="https://tiktok.com/shop">TikTok Shop</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-photo" id="HP"></div>
+  <div class="hero-scrim"></div>
+  <div class="h-scroll"><span>SCROLL</span><div class="h-sb"></div></div>
+  <div class="hero-floor">
+    <div class="hero-slogan">
+      <strong>Start loud.<br>Wear the unexpected.</strong>
+      <span>DRESS FROM THE ANKLE UP</span>
+    </div>
+    <div class="hero-ctas">
+      <a class="btn b-w" href="https://tiktok.com/shop" target="_blank"><span>Shop on TikTok</span><span>→</span></a>
+      <a class="btn b-o" href="https://wa.me/your-number"><span>Chat on WhatsApp</span><span>→</span></a>
+    </div>
+  </div>
+</section>
+
+<div class="mq">
+  <div class="mq-or">
+    <div class="mq-tr mqf">
+      <div class="mi">NOT BASIC <span class="dot">•</span></div>
+      <div class="mi">START LOUD <span class="dot">•</span></div>
+      <div class="mi">COLOR FIRST <span class="dot">•</span></div>
+      <div class="mi">WEIRD BUT INTENTIONAL <span class="dot">•</span></div>
+      <div class="mi">DRESS FROM THE ANKLE UP <span class="dot">•</span></div>
+      <div class="mi">NOT BASIC <span class="dot">•</span></div>
+      <div class="mi">START LOUD <span class="dot">•</span></div>
+      <div class="mi">COLOR FIRST <span class="dot">•</span></div>
+      <div class="mi">WEIRD BUT INTENTIONAL <span class="dot">•</span></div>
+      <div class="mi">DRESS FROM THE ANKLE UP <span class="dot">•</span></div>
+    </div>
+  </div>
+</div>
+
+<section class="coll" id="coll">
+  <div class="coll-hd"><div><div class="slbl">Collections</div><h2 class="sh">CHOOSE YOUR<br><span style="color:var(--O)">VIBE.</span></h2></div><div class="coll-meta">Engineered for visual impact. Each pair tells a story.</div></div>
+  
+  <!-- ROW 1: 2 large cards -->
+  <div class="cg cg-2col">
+    <div class="cc rv d1" style="position:relative">
+      <div class="cc-bg"><img id="c1" alt="Optical Illusion"></div>
+      <div class="cc-tone cc-tone-orange"></div>
+      <div class="bdg">Series A</div>
+      <div class="cc-info">
+        <div class="cc-s">Optical Illusion</div>
+        <div class="cc-n">MIND BENDER</div>
+        <div class="cc-c">"Patterns that twist perception."</div>
+        <div class="cc-price">$18.99</div>
+      </div>
+    </div>
+    <div class="cc rv d2" style="position:relative">
+      <div class="cc-bg"><img id="c2" alt="Color Clash"></div>
+      <div class="cc-tone cc-tone-blue"></div>
+      <div class="bdg">Series B</div>
+      <div class="cc-info">
+        <div class="cc-s">Color Clash</div>
+        <div class="cc-n">CLASH & POP</div>
+        <div class="cc-c">"Bold meets bolder."</div>
+        <div class="cc-price">$16.99</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ROW 2: 3 equal cards -->
+  <div class="cg cg-3col">
+    <div class="cc rv d1" style="position:relative">
+      <div class="cc-bg"><img id="c3" alt="Daily Vibes"></div>
+      <div class="cc-tone cc-tone-orange"></div>
+      <div class="bdg">Series C</div>
+      <div class="cc-info">
+        <div class="cc-s">Daily Vibes</div>
+        <div class="cc-n">EVERYDAY BOLD</div>
+        <div class="cc-c">"Wear your attitude."</div>
+        <div class="cc-price">$15.99</div>
+      </div>
+    </div>
+    <div class="cc rv d2" style="position:relative">
+      <div class="cc-bg"><img id="c4" alt="Graphic Play"></div>
+      <div class="cc-tone cc-tone-blue"></div>
+      <div class="bdg">Series D</div>
+      <div class="cc-info">
+        <div class="cc-s">Graphic Play</div>
+        <div class="cc-n">ART ON FEET</div>
+        <div class="cc-c">"Design meets comfort."</div>
+        <div class="cc-price">$17.99</div>
+      </div>
+    </div>
+    <div class="cc rv d3" style="position:relative">
+      <div class="cc-bg"><img id="c5" alt="Statement"></div>
+      <div class="cc-tone cc-tone-orange"></div>
+      <div class="bdg">Series E</div>
+      <div class="cc-info">
+        <div class="cc-s">Statement</div>
+        <div class="cc-n">MAKE A MOVE</div>
+        <div class="cc-c">"Your socks speak first."</div>
+        <div class="cc-price">$19.99</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="prod rv">
+  <div class="prod-grid">
+    <div class="pd rv d1"><div class="pd-bg"><img id="p1" alt="detail"></div><div class="pd-scrim"></div><div class="pd-bar"></div><div class="pd-info"><div class="pd-lbl">Optical Series</div><div class="pd-copy">ENGINEERED FOR VISUAL IMPACT.</div><div class="pd-desc">Visual geometry. Every stitch.</div></div></div>
+    <div class="pd rv d2"><div class="pd-bg"><img id="p2" alt="pattern"></div><div class="pd-scrim"></div><div class="pd-bar"></div><div class="pd-info"><div class="pd-lbl">Precision Knit</div><div class="pd-copy">BUILT TO DISRUPT.</div><div class="pd-desc">Pattern precision. No shortcuts.</div></div></div>
+    <div class="pd rv d3"><div class="pd-bg"><img id="p3" alt="art"></div><div class="pd-scrim"></div><div class="pd-bar"></div><div class="pd-info"><div class="pd-lbl">Graphic Play</div><div class="pd-copy">DESIGNED TO BE SEEN.</div><div class="pd-desc">Art on fabric. Worn loud.</div></div></div>
+  </div>
+</section>
+
+<section class="lb rv" id="lb">
+  <div class="lb-hd"><div><div class="slbl">Lookbook</div><h2 class="sh">YOUR OUTFIT<br><span style="color:var(--O)">STARTS HERE.</span></h2></div><div class="lb-sub">Real product.<br>All socks.<br>Drag to explore.</div></div>
+  <div class="lb-tr" id="LB"><div class="lbc" style="width:318px;height:458px">
+  <img id="b1" alt="SPIRAL MIND">
+  <div class="lbc-price">$18.99</div>
+  <div class="lbc-info"><div class="lbc-tag">Look 001</div><div class="lbc-nm">SPIRAL MIND</div></div>
+</div><div class="lbc" style="width:256px;height:370px">
+  <img id="b2" alt="CHESS WARP">
+  <div class="lbc-price">$16.99</div>
+  <div class="lbc-info"><div class="lbc-tag">Look 002</div><div class="lbc-nm">CHESS WARP</div></div>
+</div><div class="lbc" style="width:294px;height:428px">
+  <img id="b3" alt="GLITCH CITY">
+  <div class="lbc-price">$21.99</div>
+  <div class="lbc-info"><div class="lbc-tag">Look 003</div><div class="lbc-nm">GLITCH CITY</div></div>
+</div><div class="lbc" style="width:268px;height:396px">
+  <img id="b4" alt="CHICKEN LEG">
+  <div class="lbc-price">$14.99</div>
+  <div class="lbc-info"><div class="lbc-tag">Look 004</div><div class="lbc-nm">CHICKEN LEG</div></div>
+</div><div class="lbc" style="width:306px;height:446px">
+  <img id="b5" alt="CAT CHAOS">
+  <div class="lbc-price">$15.99</div>
+  <div class="lbc-info"><div class="lbc-tag">Look 005</div><div class="lbc-nm">CAT CHAOS</div></div>
+</div></div>
+</section>
+
+<section class="soc rv" id="soc">
+  <div class="slbl">From The Feed</div>
+  <h2 class="sh">THE FEED<br><span style="color:var(--O)">IS LOUD</span></h2>
+  <div class="tt-grid">
+    <div class="tt-card rv d1"><div class="tt-bg"><img id="t1" alt="TikTok"></div><div class="tt-tone"></div><div class="tt-top"><div class="tt-live">Live</div><div class="tt-vw">2.4M</div></div><div class="tt-bot"><div class="tt-usr">@zoeyincolor</div><div class="tt-txt">"wait… is this real??"</div><div class="tt-meta"><span class="tt-m">4.2K likes</span><span class="tt-m">891 saves</span></div></div></div>
+    <div class="tt-card rv d2"><div class="tt-bg"><img id="t2" alt="TikTok"></div><div class="tt-tone"></div><div class="tt-top"><div style="width:1px"></div><div class="tt-vw">890K</div></div><div class="tt-bot"><div class="tt-usr">@streetvibe.renz</div><div class="tt-txt">"these socks are insane"</div><div class="tt-meta"><span class="tt-m">12K likes</span><span class="tt-m">2.1K saves</span></div></div></div>
+    <div class="tt-card rv d3"><div class="tt-bg"><img id="t3" alt="TikTok"></div><div class="tt-tone"></div><div class="tt-top"><div class="tt-live">New</div><div class="tt-vw">1.1M</div></div><div class="tt-bot"><div class="tt-usr">@colorcrushh</div><div class="tt-txt">"built my ootd around these"</div><div class="tt-meta"><span class="tt-m">8.4K likes</span><span class="tt-m">1.3K saves</span></div></div></div>
+    <div class="tt-card rv d4"><div class="tt-bg"><img id="t4" alt="TikTok"></div><div class="tt-tone"></div><div class="tt-top"><div style="width:1px"></div><div class="tt-vw">3.7M</div></div><div class="tt-bot"><div class="tt-usr">@kovava.drops</div><div class="tt-txt">"color clash drop… can't breathe"</div><div class="tt-meta"><span class="tt-m">31K likes</span><span class="tt-m">7.2K saves</span></div></div></div>
+  </div>
+</section>
+
+<section class="final rv" id="cta">
+  <div class="fb-photo" id="FB-PHOTO"></div>
+  <div class="fb-scrim"></div>
+  <div class="fb-slash"></div>
+  <div class="fb-ghost">WEAR THE UNEXPECTED</div>
+
+  <div class="fb-con">
+    <div class="fb-eye">KOVAVA SOCKS &#8212; Dress From The Ankle Up</div>
+
+    <h2 class="fb-t">
+      <span class="ft1">WEAR THE</span>
+      <span class="ft2">UNEXPECTED.</span>
+    </h2>
+
+    <p class="fb-sub">Dress from the ankle up.</p>
+
+    <div class="fb-sos">
+      <a class="si si-tt" href="https://tiktok.com/@kovava" target="_blank" title="TikTok">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.95a8.16 8.16 0 004.77 1.52V7.01a4.85 4.85 0 01-1-.32z"/></svg>
+      </a>
+      <a class="si si-ins" href="https://instagram.com/kovava" target="_blank" title="Instagram">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+      </a>
+      <a class="si si-pin" href="https://pinterest.com/kovava" target="_blank" title="Pinterest">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738a.36.36 0 01.083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.632-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg>
+      </a>
+    </div>
+
+    <div class="fb-ctas">
+      <a class="fb-btn fb-p" href="https://tiktok.com/shop" target="_blank"><span>Shop on TikTok</span><span>→</span></a>
+      <a class="fb-btn fb-o" href="https://wa.me/your-number"><span>Chat on WhatsApp</span><span>→</span></a>
+      <a class="fb-btn fb-g" href="https://instagram.com/kovava" target="_blank"><span>Follow @kovava</span><span>→</span></a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <a href="#"><img class="ft-logo" id="FL" src="" alt="KOVAVA SOCKS"></a>
+  <div class="ft-lks">
+    <a href="#coll">Collections</a><a href="#lb">Lookbook</a>
+    <a href="https://tiktok.com/shop" target="_blank">TikTok Shop</a>
+    <a href="https://wa.me/your-number">WhatsApp</a>
+    <a href="https://instagram.com/kovava" target="_blank">Instagram</a>
+    <a href="https://pinterest.com/kovava" target="_blank">Pinterest</a>
+  </div>
+  <div class="ft-cp">Dress from the ankle up. © 2024 KOVAVA</div>
+</footer>
+
+<script src="/src/main.ts"></script>
+</body>
+</html>
